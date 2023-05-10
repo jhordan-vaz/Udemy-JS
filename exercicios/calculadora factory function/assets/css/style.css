@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+ --primary-color: #b63ba6;
+ --primary-color-darker: #4b1343;
+ --primary-color-dark-and-darker: #250b21;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px; 
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+   font-size: 24px;
+   height: 50px;
+   padding: 0 20px
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color-darker)
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color:#fff;
+  font-size:  18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+form button:active {
+  background: red;
+}
+
+.calculadora {
+  width: 400px;
+}
+
+.display {
+  font-size: 2em;
+  width: 100%;
+  text-align: right;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  font-size: 1em;
+  border: none;
+  background: #bab2b2;
+  cursor: pointer;
+}
+
+.btn-clear:active {
+  background: #3d01e1
+}
+
+.btn-clear:hover {
+  background: #17b632;
+}
+
+.btn-clear {
+  background: rgb(244, 62, 62);
+} 
+
+.btn:hover {
+  background: #807b7b
+}
+
+.btn:active {
+  background: #3e3d3d
+}
+
+.btn-eq {
+  background: royalblue;
+}
