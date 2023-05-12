@@ -13,6 +13,10 @@ function createCalculator() {
      this.clickButton();
     },
 
+    backspaceNumber() {
+      this.display.value = this.display.value.slice(0, -1);
+    },
+
     clickButton() {
       // this -> calculadora
       document.addEventListener("click",function(e) { 
@@ -24,6 +28,10 @@ function createCalculator() {
 
         if(el.classList.contains("btn-clear")) {
           this.clearDisplay();
+        }
+
+        if(el.classList.contains("btn-del")) {
+          this.backspaceNumber();
         }
 
       }.bind(this)); // invés de usar o "seu" this usa o "meu". Trazendo o this anterior (lockando o this).
