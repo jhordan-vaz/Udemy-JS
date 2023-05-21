@@ -10,7 +10,12 @@
   outline: 0;
 }
 
-
+sectionGPS {
+  background: #fff;
+  margin: 200px;
+  padding: 130px;
+  width: 100%;
+}
 
 body {
   margin: 0;
