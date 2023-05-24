@@ -13,6 +13,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 :root { 
   --white-color: #FFFFFF;
   --primary-color: black;
+  --light-gray-color: #EEE;
   --gap: 3rem; 
 }
 
@@ -22,7 +23,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%
 }
 
 body {
@@ -60,10 +61,15 @@ h6 {
   font-size: 3.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main-bg {
   background-image: url(/3_Palmeiras/assets/img/main-bg.png);
   background-size: cover;
   background-position: center center;
+
 }
 
 .white-bg {
@@ -83,4 +89,54 @@ h6 {
 .menu {
   background: var(--white-color);
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 3px solid var(--light-gray-color);
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu h1 {
+  font-size: 2.3rem;
+  color: var(--primary-color)
+}
+
+.menu h1 a {
+  color: inherit;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a {
+  display: block; 
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 0%;
+  height: 0.2rem;
+  background: crimson;
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  width: 50%;
 }
