@@ -28,7 +28,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 2.0rem;
-  color: var(--white-color)
+  color: var(--primary-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,4 +78,9 @@ h6 {
 
 .section {
   min-height: 100vh;
+}
+
+.menu {
+  background: var(--white-color);
+  position: fixed;
 }
