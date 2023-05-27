@@ -88,6 +88,11 @@ a {
   right: 0;
 } */
 
+.intro-img img {
+  max-width: 60%;
+  height: auto;
+}
+
 .intro-content {
   position: relative;
   top: -7rem;
@@ -97,7 +102,7 @@ a {
   height: 50vh;
 }
 
-.intro-text-content {
+.intro-text-content, .intro-img {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -135,6 +140,7 @@ a {
   right: 0;
   width: 100%;
   border-bottom: 0.05rem solid var(--light-gray-color);
+  z-index: 1;
 }
 
 .menu-content {
