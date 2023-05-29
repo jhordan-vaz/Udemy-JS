@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+ --primary-color: #9f2990;
+ --primary-color-darker: #3a0b33;
+ --primary-color-dark-and-darker: #070206;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px; 
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+}
+
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color:#fff;
+  font-size:  18px;
+  font-weight: 700;
+  height: 60px;
+  cursor: pointer;
+}
+
+.relogio {
+  font-size: 3em;
+}
+p .button {
+  width: 30px;
+}
+
+p .iniciar, .pausar, .zerar {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 22px;
+  font-size: 16px;
+  font-weight: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+p button:hover {
+  background: #722da0;
+}
+
+p button:active {
+  background: #4f1cea;
+}
+
+.pausado {
+  color: red;
+}
