@@ -4,8 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atributos de id e class</title>
+
+  <style>
+    h1 {
+      background: red;
+    }
+
+    #nao-pode-repetir{
+      background: blue;
+    }
+
+    .pode-se-repetir {
+      background: purple !important;
+    }
+    
+    .bold {
+      color:blueviolet;
+    }
+  </style>
 </head>
 <body>
-  <h1></h1>
+  <h1 id="unico-na-pagina" class="pode-se-repitir">
+    Texto aqui
+  </h1>
+  <h1 id="nao-pode-repetir" class="pode-se-repitir">
+    Texto aqui
+  </h1>
+  <p>Um texto <b class="bold">qualquer</b></p>
 </body>
 </html>
