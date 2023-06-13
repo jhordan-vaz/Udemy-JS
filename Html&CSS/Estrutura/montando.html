@@ -4,12 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Montando Estrutura</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #heading div {
+      width: 90%;
+      display: flex;
+      background: #e50914;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    #heading h1 {
+      padding: 15px 0 15px 15px;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    #heading .h1 {
+      padding: 15px 100px;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    #heading  a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #heading {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
 </head>
 <body>
-  
-  <div style="width: 10rem; height: 10rem; background: blueviolet;">Conteúdo</div>
+  <header id="heading">
+    <div>
+    <h1 class="h1">
+      <a href="#">Mist of Darkness</a>
+    </h1>
 
-  <div style="width: 5rem; height: 5rem; background: red;">Conteúdo</div>
-  
+    <h2 class="h1">
+      <a href="#">Mist of Darkness</a>
+    </h2>
+  </div>
+  </header>
 </body>
 </html>
