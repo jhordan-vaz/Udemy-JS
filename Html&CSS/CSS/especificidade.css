@@ -1,0 +1,23 @@
+/* 
+ID > Classes > Atributos > Pseudo-classes > Pseudo-elementos
+1        0         0            0                  0
+0        1         0            0                  0
+1        1         0            0                  0
+
+especificidade
+empate
+style
+!important ***
+*/
+
+body#b.bclass p#p.p {
+  background: purple;
+}
+
+#p {
+  background-color: blueviolet;
+}
+
+.p {
+  background: blue;
+}

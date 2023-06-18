@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, p {
+  color: blueviolet
+}
+
+body div section p,
+body div section h1 {
+  color: red;
+}
+
+.heading {
+  color: blue;
+  background: red;
+}
+
+.main-content {
+  font-style: italic;
+  background-color: aqua;
+}
+
+.pai > .filha{
+  color: blue;
+  font-size: 5rem
+}

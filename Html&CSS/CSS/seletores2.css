@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pai h1+p {
+  color: blue;
+}
+
+.pai p+h1 {
+  color: yellow;
+}
+
+[meu-atributo="valor"] {
+  color: blueviolet;
+}
+
+[checked] {
+  height: 50px;
+  width: 50px;
+}
