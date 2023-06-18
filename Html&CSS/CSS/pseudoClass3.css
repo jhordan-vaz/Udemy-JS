@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li:nth-child(odd) {
+  background-color: blueviolet;
+}
+
+ul li:nth-child(even) {
+  background-color: cyan;
+}
+
+ul li:nth-child(3n) {
+  background-color: red;
+}
