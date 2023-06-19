@@ -1,0 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.pai {
+  width: 50rem; /* 500px */
+  height: 100vh;
+  background: blue;
+}
+
+.pai > div {
+  width: 50%;
+  height: 50rem;
+  background: rebeccapurple;
+}
+
+.cor2 {
+  background: purple;
+}
+
+.cor3 {
+  background: violet;
+}
+
+p {
+  font-size: 0.5em;
+}
