@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid .col {
+  width: 100px;
+  height: 100px;
+   /* ABCDEF123456789 */
+}
+
+.grid {
+  display: block;
+  background: violet;
+  margin: 15px;
+  height: 100px;
+  width: 33.3%;
+  float: left;
+}
+
+
