@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   font-size: 15px;
@@ -14,13 +18,13 @@ body {
   padding: 15px;
   margin: 0 auto;
   padding-top: 60px;
-  height: 100vh;
 }
 
 .grid .col-content {
     width: 100%;
     height: 100%;
     background: blue ;
+    border-radius: 0 0 0 100px;
 }
 
 .grid:after {
@@ -73,8 +77,13 @@ body {
 
 .full-page {
   max-width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
+  padding-top: 73px;
   height: 100vh;
   background: blueviolet;
+}
+
+.full-page-content {
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
