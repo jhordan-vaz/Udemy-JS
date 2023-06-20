@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 33.3%;
+  height: 150px;
+  float: left;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+.col-content {
+  background: blueviolet;
+  height: 150px;
+  width: 150px;
+  margin: 15px;
+}
+
+@media (max-width: 568px) {
+  .grid {
+    width: 100%;
+  }
+}
+
+@media (min-width: 569px) and (max-width: 768px) {
+  .grid {
+    width: 50%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .grid {
+    width: 33.3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    width: 25%;
+  }
+}
