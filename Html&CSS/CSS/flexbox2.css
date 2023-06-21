@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  background: blueviolet;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 640px;
+  width: 640px;
+}
+
+.content {
+  background: blue;
+  width: 33.3%;
+  color: #fff;
+}
