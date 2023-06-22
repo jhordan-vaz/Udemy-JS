@@ -11,12 +11,25 @@
   align-items: flex-start;
   align-content: center;
   flex-wrap: wrap;
-  height: 640px;
-  width: 640px;
 }
 
 .content {
+  flex-grow: 1;
+  flex-basis: 320px;
+  flex-shrink: 0;
+  margin-bottom: 2%;
   background: blue;
+  height: 200px;
   width: 33.3%;
   color: #fff;
+}
+
+.content:nth-child(2) {
+  background-color: blueviolet;
+  flex: 10 1 320px;
+}
+
+.content:nth-child(3) {
+  background-color: blueviolet;
+  align-self: flex-end;
 }
