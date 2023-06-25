@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+// Form
+import { FaPlus } from "react-icons/fa";
+
 import "../components/Main.css";
 
 export default class Main extends Component {
@@ -15,15 +18,18 @@ export default class Main extends Component {
 
 
   render () {
-    const { novaTarefa } = this.state;
+     const { novaTarefa } = this.state;
 
     return (
      <div className="main">
        <h1>Lista de tarefas</h1>
 
-      <form action="#">
-        <input onChange={this.inputChange} type="text" />
-        <button type="submit">Enviar</button>
+      <form action="#" className="form">
+        <input onChange={this.inputChange} type="text"
+        value={novaTarefa}/>
+        <button type="submit">
+          <FaPlus />
+        </button>
       </form>
      </div>
     );
