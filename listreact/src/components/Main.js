@@ -8,7 +8,12 @@ import "../components/Main.css";
 export default class Main extends Component {
   state = {
     novaTarefa: "",
-  }
+    tarefas: [
+      "Café",
+      "Beber água",
+      "Estudar",
+    ],
+  };
 
   inputChange = (e) => {
     this.setState({
