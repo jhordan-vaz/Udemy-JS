@@ -3,13 +3,16 @@ import React, { Component } from "react";
 // Form
 import { FaPlus } from "react-icons/fa";
 
+// Tarefas
+import { FaEdit, FaWindowClose } from "react-icons/fa";
+
 import "../components/Main.css";
 
 export default class Main extends Component {
   state = {
     novaTarefa: "",
     tarefas: [
-      "Café",
+      "Fazer Café",
       "Beber água",
       "Estudar",
     ],
@@ -39,7 +42,12 @@ export default class Main extends Component {
 
       <ul className="tarefas">
         {tarefas.map(tarefa => (
-          <li>{tarefa}</li>
+          <li key={tarefa}>{tarefa}
+            <div>
+             <FaEdit className="edit"/>
+             <FaWindowClose className="delete"/>
+            </div>
+          </li>
         ))}
       </ul>
      </div>
