@@ -37,6 +37,12 @@
   align-items: center;
   justify-content: center;
   margin: 0 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.form button:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .tarefas {
@@ -74,4 +80,9 @@
 .tarefas li .delete {
   cursor: pointer;
   transition: all 600ms;
+}
+
+.tarefas li span {
+  display: flex;
+  align-items: center;
 }
