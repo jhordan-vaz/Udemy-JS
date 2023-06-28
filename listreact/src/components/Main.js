@@ -12,11 +12,12 @@ export default class Main extends Component {
   state = {
     novaTarefa: "",
     tarefas: [],
+    index: -1,
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {  tarefas } = this.state;
+    const { tarefas } = this.state;
     let { novaTarefa } = this.state;
     novaTarefa = novaTarefa.trim();
 
@@ -24,8 +25,38 @@ export default class Main extends Component {
 
     const novasTarefas = [...tarefas];
 
+    if(index == -1) {
+      this.setState({
+        tarefas: [...novasTarefas, novaTarefa],
+        novaTarefa: "",
+      });
+    } else {
+      novasTarefas[index] = novaTarefa;
+
+      this.setState({
+        tarefas: [...novasTarefas],
+        index: -1,
+      });
+    }
+  }
+
+  inputEdit = (e, index) => {
+    const { tarefas } = this.state;
+
+
     this.setState({
-      tarefas: [...novasTarefas, novaTarefa],
+      index,
+      novaTarefa: tarefas[index],
+    });
+  }
+
+  inputDelete = (e, index) => {
+    const { tarefas } = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+
+    this.setState({
+      tarefas: [...novasTarefas],
     });
   }
 
@@ -52,11 +83,11 @@ export default class Main extends Component {
       </form>
 
       <ul className="tarefas">
-        {tarefas.map(tarefa => (
+        {tarefas.map((tarefa, index) => (
           <li key={tarefa}>{tarefa}
             <span>
-             <FaEdit onClick={inputeWrite} className="edit"/>
-             <FaWindowClose onClick={inputDelete} className="delete"/>
+             <FaEdit onClick={(e) => this.inputWrite(e, index)} className="edit"/>
+             <FaWindowClose onClick={(e) => this.inputDelete(e, index)} className="delete"/>
             </span>
           </li>
         ))}
