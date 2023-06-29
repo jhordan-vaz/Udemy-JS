@@ -15,6 +15,22 @@ export default class Main extends Component {
     index: -1,
   };
 
+  componentDidMount() {
+    const tarefas = JSON.parse(localStorage.getItem("tarefas"));
+
+    if(!tarefas) return;
+
+    this.setState({ tarefas });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { tarefas } = this.state;
+
+    if(tarefas === prevState.tarefas) return;
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     const { tarefas, index } = this.state;
@@ -36,6 +52,7 @@ export default class Main extends Component {
       this.setState({
         tarefas: [...novasTarefas],
         index: -1,
+        novaTarefa: "",
       });
     }
   }
@@ -73,14 +90,6 @@ export default class Main extends Component {
     return (
      <div className="main">
        <h1>Lista de tarefas</h1>
-
-      <form onSubmit={this.handleSubmit} action="#" className="form">
-        <input onChange={this.inputChange} type="text"
-        value={novaTarefa}/>
-        <button type="submit">
-          <FaPlus />
-        </button>
-      </form>
 
       <ul className="tarefas">
         {tarefas.map((tarefa, index) => (
