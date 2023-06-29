@@ -17,7 +17,7 @@ export default class Main extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { tarefas } = this.state;
+    const { tarefas, index } = this.state;
     let { novaTarefa } = this.state;
     novaTarefa = novaTarefa.trim();
 
@@ -86,7 +86,7 @@ export default class Main extends Component {
         {tarefas.map((tarefa, index) => (
           <li key={tarefa}>{tarefa}
             <span>
-             <FaEdit onClick={(e) => this.inputWrite(e, index)} className="edit"/>
+             <FaEdit onClick={(e) => this.inputEdit(e, index)} className="edit"/>
              <FaWindowClose onClick={(e) => this.inputDelete(e, index)} className="delete"/>
             </span>
           </li>
