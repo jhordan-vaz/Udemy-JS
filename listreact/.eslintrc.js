@@ -35,6 +35,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     "react/jsx-filename-extension" : "off",
     "react/jsx-uses-react": "error",
+    "react/forbid-prop-types": 0,
     "react/jsx-uses-vars": "error",
     "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
   },
