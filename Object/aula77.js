@@ -1,4 +1,4 @@
-// Inhertance Advanced
+// Polimorfism
 
 function socomit () {
   console.log("estudar");
