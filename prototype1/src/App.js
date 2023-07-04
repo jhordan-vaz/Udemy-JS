@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import react from 'react';
+import "./App.css";
+import Main from "./components/Main/Main.js";
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main />
   );
 }
 
-export default App;
+/*
+      <body className="grid">
+        <div className="grid-con">
+            <grid>1</grid>
+            <grid>2</grid>
+            <grid>3</grid>
+            <grid>4</grid>
+            <grid>5</grid>
+            <grid>6</grid>
+        </div>
+      </body>
+*/
