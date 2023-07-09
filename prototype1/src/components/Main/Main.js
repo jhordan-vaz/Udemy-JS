@@ -15,7 +15,19 @@ export default class Main extends Component {
           <li href="#" className="a">Rules</li>
         </ul>
       </div>
+
+      <section className="sectiontest">
+        <div className="grid">
+          <div className="col-content"></div>
+          <div className="col-content"></div>
+          <div className="col-content"></div>
+          <div className="col-content"></div>
+          <div className="col-content"></div>
+          <div className="col-content"></div>
+        </div>
+      </section>
      </section>
+     
     );
   }
 }
