@@ -1,5 +1,13 @@
- document.querySelector("btn")
+class ValidaFormulario {
+    constructor() {
+        
+        
+        this.eventos();
+    }
 
-document.getElementById("btn").addEventListener("click", function() {
-    alert("Funfando");
-})
+    eventos() {
+
+    }
+}
+
+const valida = ValidaFormulario();
