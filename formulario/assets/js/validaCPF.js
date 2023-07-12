@@ -45,3 +45,4 @@ class validaCPF {
 
 let validacpf = new validaCPF("071.833.341-12");
 console.log(validacpf.valida());
+

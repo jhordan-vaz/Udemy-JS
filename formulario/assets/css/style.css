@@ -60,3 +60,7 @@ form button:active {
   background: red;
 }
 
+.error-text {
+  font-size: 16px;
+  color: red;
+}
