@@ -19,7 +19,7 @@ class validaCPF {
     this.novoCPF = cpfSemDigitos + digito1 + digito2;
   }
 
-  geraDigito(cpfSemDigitos) {
+  static geraDigito(cpfSemDigitos) {
     let total = 0;
     let reverso = cpfSemDigitos.length + 1;
 
@@ -44,5 +44,10 @@ class validaCPF {
 }
 
 let validacpf = new validaCPF("071.833.341-12");
-console.log(validacpf.valida());
 
+
+if (validacpf.valida()) {
+  console.log("CPF válido");
+} else {
+  console.log("CPF inválido");
+}
