@@ -26,26 +26,39 @@ document.addEventListener("click", e => {
   }
 });
 
-async function loadPage(el) {
+ async function loadPage(el) {    // async
+  try{ 
   const href = el.getAttribute("href");
+  const response = await fetch(href);
 
-  const objConfig = {
-    method: "GET",
-    url: href,
-  }
+  if(response.status !== 200) throw new Error("Erro 404!");
 
-  try { 
-    const response = await request(objConfig);
-    loadResult(response);
+  const html = await response.text();
+  loadResult(html);
   } catch(e) {
     console.log(e);
   }
+  // fetch(href)
+  //   .then(response => {
+  //     if(response.status !== 200) throw new Error("Erro 404!");
+  //     return response.text();
+  //   }) 
+  //   .then(html =>  loadResult(html))
+  //   .catch(e => console.log(e));
 }
 
 function loadResult(response) {
   const result = document.querySelector(".resultado");
   result.innerHTML = response;
 }
+
+fetch("pag1.html")
+ .then(response => {
+  if(respose.status != 200) throw new Error("Erro 404");
+  return response.text();
+ })
+  .then(html => console.log(html))
+  .catch(e => console.error(e));
 
 // const request = obj => {
 //   const xhr = new XMLHttpRequest();
