@@ -1,31 +1,23 @@
-// class validaIMC {
-//   constructor(imc) {
-//     Object.defineProperty(this, "imc", {
-//       writable: true,
-//       enumerable: true,
-//       configurable: false,
-//     });
-//   }
+class saberIMC {
+  constructor(peso, altura) { // parametro formal
+    Object.defineProperty(this, "imc", { // definindo sobre o objeto e globalizando ele
+      writable: true, 
+      enumerable: true,
+      configurable: false, 
+    });
+  }
 
+  static calcula() {
+    const cPeso = saberIMC.peso;
+    const cAltura = saberIMC.altura;
 
-//    calcIMC(height, weight) {
-//     let imc = height / (weight * weight);
-//   }
+    let resultado;
 
-// }
+    resultado = peso / (altura * altura);
+    return console.log(resultado.toFixed(2)); 
+  }
 
-// let totalIMC = new validaIMC(1.80, 80);
-
-function CalcIMC(peso, altura){
-    this.peso = peso
-    this.altura = altura
-
-    this.calcIMC = function() {
-      let imc;
-      imc = this.peso / ( this.altura * this.altura);
-      console.log(imc);
-  };
 }
 
-const imc1 = new CalcIMC(80, 1.80);
-imc1.calcIMC();
+// let imc = new saberIMC(80, 1.80);
+let imc = new saberIMC(80, 1.80);
