@@ -20,4 +20,4 @@ class saberIMC {
 }
 
 // let imc = new saberIMC(80, 1.80);
-let imc = new saberIMC(80, 1.80);
+let imc = new saberIMC(80, 1.80, calcula());
