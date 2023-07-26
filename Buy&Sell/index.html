@@ -11,7 +11,7 @@
 
 <body>
 
-  <section class="form">
+  <section class="form"> 
     <h1>Compre e Venda</h1>
     <p>
       Cadastre para poder utilizar recursos diversos.   
@@ -20,26 +20,38 @@
     <ul>
       <li>Nome e Sobrenome completo.</li>
       <li>Usuário deverá conter entre 4 a 16 caracteres.</li>
+      <li>E-mail não pode possuir espaços e deverá conter "@" e o domínio".</li>
       <li>E-mail deverá ser verificado</li>
       <li>Senha deverá conter de 6 a 12 caracteres.</li>
       <li>São permitidos:(@ _ ~ # $ %).</li>
     </ul>
 
-    <form action="">
+    <form action="" id="form"> 
       <label for="nome">Nome</label>
-      <input type="text" id="name">
+      <input type="text" id="getName">
   
       <label for="sobrenome">Sobrenome</label>
-      <input type="text" id="lastname">
+      <input type="text" id="getLastname">
 
       <label for="email">E-mail</label>
-      <input type="text" id="email">
+      <input type="text" id="getEmail">
   
-      <label for="senha">Senha</label>
-      <input type="password" id="input-teste-3">
+      <label for="idade">Idade</label>
+      <input type="text" id="getAge">
   
+      <label for="confirmasenha">Senha</label>
+      <input type="password" id="password">
+
       <label for="confirmasenha">Confirmar Senha</label>
-      <input type="password" id="confirmpassword">
+      <input type="password" id="confirmPassword">
+
+      <p>Gostaria de receber cupons e ofertas?</p>
+
+      <select name="cupon" id="getCupon">
+      <option value="false">Não</option>
+      <option value="true" selected>Sim</option>
+      </select>
+
       <button type="submit">Enviar</button>
     </form>
     

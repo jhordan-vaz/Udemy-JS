@@ -42,8 +42,10 @@ form input, form label, form button {
   margin-bottom: 10px;
 }
 
-form label {
-  
+form select {
+  width: 60px;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
 form input {
@@ -53,7 +55,7 @@ form input {
 }
 
 form input:focus {
-  outline: 1px solid var(--primary-color-darker)
+  outline: 2px solid var(--primary-color-darker)
 }
 
 form button {
