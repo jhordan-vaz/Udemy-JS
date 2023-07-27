@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
-container {
-  background: red;
+.container {
+ width: 600px;
+ height: 600px;
 }
+
