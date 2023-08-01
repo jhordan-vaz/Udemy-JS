@@ -4,8 +4,14 @@
 function Pessoa(nome, sobrenome, idade){ // parametros
   // criando chaves.
 
-  const ID = 112233;
+  // Atributos privados. Não estão disponível fora.
+  const ID = 112233; // não está disponível fora.
+  const metodoInterno = function() { // não está disponível fora.
+    console.log("");
+  };
 
+
+  // Atributos ou métodos públicos. Quando se tem o this.
   this.nome = nome;       
   this.sobrenome = sobrenome;
   this.idade = idade;
