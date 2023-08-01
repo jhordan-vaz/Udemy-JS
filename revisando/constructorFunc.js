@@ -10,8 +10,8 @@ function Pessoa(nome, sobrenome, idade){ // parametros
     console.log("");
   };
 
-
   // Atributos ou métodos públicos. Quando se tem o this.
+  // chaves.
   this.nome = nome;       
   this.sobrenome = sobrenome;
   this.idade = idade;
