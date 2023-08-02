@@ -1,33 +1,30 @@
-const fs = require("fs").promises;
-const path = require("path") // requerer o caminho de onde vai o arquivo.
-const filePath = path.resolve(__dirname, "..", "teste.txt");
-
-
-
-module.exports = (path, file) => { // writter 
-  fs.writeFile(filePath, "objjson", { flag: "w" });
-};
-
-// async function fileWritter (path, file) { // funcao que vai escrever
-
-// } 
-
 function Product(name, price, stock) {
   this.name = name;
   this.price = price;
 
+  let privateStock = this.stock; // "privateStock" recebe o valor inicial de "stock"
+
   Object.defineProperty(this, "stock", {
     configurable: true,
-    value: stock,
     enumerable: true,
-    writable: true, 
+    get: function() {
+      return `estoque: ${privateStock}`;
+    },
+    set: function(valor) {
+      if(typeof valor!== "number") {
+        throw new TypeError(`Propriedade "estoque" só pode receber números.`);
+      }
+
+      privateStock = valor; // privateStock recebe o valor de "valor".
+    },
   });
 }
 
 const prod1 = new Product("Xcaixa", 1999, 5);
-console.log(prod1);
+prod1.stock = 4;
+console.log(prod1.stock);
 
-for(let keys in prod1) {
-  console.log(keys);
-}
+// for(let keys in prod1) {
+//   console.log(keys);
+// }
 
