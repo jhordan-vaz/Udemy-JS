@@ -1,5 +1,5 @@
 function ValidID(sentID) { // formal param 
-  Object.defineProperty(this, "cleanID", { 
+  Object.defineProperty(this, "cleanID", { // referindo ao objeto que vai usar ValidID e nome do obj "cleanID"
     enumerable: true, // mostra o "cleanID"
     get: function() {
       return sentID.replace(/\D+/g, ""); // tudo que não for número em "sentID" vai ser retirado.
@@ -11,7 +11,7 @@ function ValidID(sentID) { // formal param
 ValidID.prototype.IdValidator = function() {   // Valida se o CPF recebido passa nos checks.
   if(typeof this.cleanID === "undefined") return false;
   if(this.cleanID.length !== 11) return false;
-  if(this.isSequence()) return true;
+  if(this.isSequence()) return true; 
   
   const IdNumbers = this.cleanID.slice(0, -2); // IdNumbers recebe de cleanID | segurando o valor de cleanID
   const type1 = this.IdVerify(IdNumbers);  // passando pra funcao e minha variavel com o valor de "cleanID"
@@ -46,3 +46,24 @@ const id = new ValidID("071.833.341-12");
 // id.valid();
 console.log(id.IdValidator());
 
+// function Produtos(nome, valor, cor, estoque) { // Molde || Forma 
+//   Object.defineProperty(this, estoque, {
+//     enumerable: true,
+//     configurable: true,
+//     writable: true,
+//     value: estoque,
+//   });
+
+//   this.nome = nome;
+//   this.valor = valor;
+//   this.cor = cor;
+// }
+
+// Produtos.prototype.raise = function(val) {
+//   if(val != Number(val)) return console.log(` Número inválido! `);
+//   return this.valor += this.valor + val;
+// }
+
+// const p1 = new Produtos("Iphone 14" , 9.999, "black", 8);
+// p1.raise("a");
+// console.log(p1);
