@@ -23,21 +23,22 @@
 //   if(this.cleanID.length !== 11) return false;
 //   if(this.isSequence()) return true; 
 
-function ImcCalc(peso, altura) {
-  this.peso = peso;
-  this.altura = altura;
-}
+// function ImcCalc(peso, altura) {
+//   this.peso = peso;
+//   this.altura = altura;
+// }
 
-ImcCalc.prototype.calculateIMC = function() {
-  if(typeof this.peso != Number) return false;
-  if(typeof this.peso.length.Number > 300) return false;
-  let resultado = this.peso / (this.altura ** 2);
-  return resultado.toFixed(2);
-};
+// ImcCalc.prototype.validIMC = function() {
+//   if(typeof this.peso !== "number") return false;
+//   let resultado = this.peso / (this.altura ** 2);
+//   return resultado.toFixed(2);
+// };
 
-ImcCalc.prototype.goodIMC = function() {
+// ImcCalc.prototype.goodIMC = function() {
 
-};
+// };
 
-const imc = new ImcCalc(90, 1.80);
-console.log(imc.calculateIMC());
+// const imc = new ImcCalc("a", 1.80);
+// console.log(imc.calculateIMC());
+
+
