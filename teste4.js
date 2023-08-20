@@ -34,13 +34,12 @@ function Teste(a, b, c) {
 }
 
 Teste.prototype.testar = function () {
-  let Holder = true;
-
+  
   let a = this.a;
   let b = this.b;
   let c = this.c;
 
-  if(a != Number || a < 1) return console.log("Inválid");
+  // if(a != Number || a < 1) return console.log("Inválid");
   // if(b !== Number || b === 0) return console.log("Valor inválido"); 
   // if(c !== Number || c === 0) return console.log("Valor inválido"); 
   console.log(typeof a);
@@ -52,5 +51,5 @@ Teste.prototype.isValid = function(funcTester) {
   
 };
 
-const t1 = new Teste(5);
+const t1 = new Teste();
 t1.testar();
