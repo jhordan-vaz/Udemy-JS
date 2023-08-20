@@ -34,22 +34,35 @@ function Teste(a, b, c) {
 }
 
 Teste.prototype.testar = function () {
-  
+  let holder = true;
   let a = this.a;
   let b = this.b;
   let c = this.c;
 
-  // if(a != Number || a < 1) return console.log("Inválid");
-  // if(b !== Number || b === 0) return console.log("Valor inválido"); 
-  // if(c !== Number || c === 0) return console.log("Valor inválido"); 
-  console.log(typeof a);
-  return console.log("Passou sem problema.");
-};
-
-Teste.prototype.isValid = function(funcTester) {
-  funcTester = testar();
+  if(typeof a === "string" || a <= 0 || a === undefined) return console.log(`Invalid A`);
+  if(typeof b === "string" || b <= 0 || b === undefined) return console.log("Invalid B"); 
+  if(typeof c === "string" || c <= 0 || c === undefined) return console.log("Invalid C"); 
   
+  return holder;
 };
 
-const t1 = new Teste();
+Teste.prototype.isValid = function() {
+  let 
+  return console.log(`A: ${this.a}, B: ${this.b}, C: ${this.c}`);
+};
+
+const t1 = new Teste("a", 2, 3);
 t1.testar();
+t1.isValid();
+
+// let hora = 11;
+
+// if(hora >= 0 && hora <= 11) {
+//   return console.log("Bom dia!");
+// } else if (hora >= 12 && hora <= 17)  {
+//   return console.log("boa tarde!");
+// } else if (hora >= 18 && hora <= 23) {
+//   return console.log("Boa noite!");
+// } else {
+//   console.log("Tenha um bom dia!");
+// }
