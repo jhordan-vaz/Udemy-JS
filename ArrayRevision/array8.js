@@ -23,3 +23,13 @@ const somarTudo = numeros.reduce((ac, val) => {
 });
 
 console.log(somarTudo);
+
+const todasAsFunc = numeros
+   .filter(val =>  val % 2 === 0)
+   .map(val => val * 2)
+   .reduce((ac, val) => ac + val);
+
+console.log(todasAsFunc);
+
+// par [ 6, 12, 34, 46, 66 ]
+// total 436
