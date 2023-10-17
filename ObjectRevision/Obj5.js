@@ -5,9 +5,27 @@ function Pessoa(nome, sobrenome) {
     this.sobrenome = sobrenome;
 }
 
-Pessoa.prototype.falarNome = function () {
-    return `${this.nome} ${this.sobrenomenome}`
+Pessoa.prototype.falarNome = () => {
+    return `${this.nome} ${this.sobrenome}`;
 }
 
-const p1 = Pessoa("Jhordan", "Vaz");
-console.log(p1);
+const p1 = new Pessoa("Jhordan", "Vaz");
+// console.log(p1);
+
+const objA = {
+    keyA: "A"
+};
+
+const objB = {
+    keyB: "B"
+};
+
+Object.setPrototypeOf(objB, objA);
+Object.setPrototypeOf(objC, objB);
+
+
+const objC = {
+    keyC: "C"
+};
+
+console.log(objB.keyA);
