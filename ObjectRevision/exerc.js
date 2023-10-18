@@ -13,6 +13,8 @@ ValidCPF.prototype.validate = function() {
     if(typeof this.cleanCPF === "undefined") return false;
     if(this.cleanCPF.lenght !== 11) return false;
     
+    const  generateID = this.cleanCPF.slice(0, -2);
+    const digit1 = this.generateDigit(generateID);
 
     return true;
 };
@@ -24,3 +26,6 @@ ValidCPF.prototype.generateDigit = function(generateID) {
 const cpf = new ValidCPF("705.484.450-52");
 console.log(cpf.cleanCPF);
 console.log(cpf.validate());
+
+
+ 
