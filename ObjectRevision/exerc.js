@@ -51,17 +51,19 @@ GetIMC.prototype.calc = function(calc) {
     const p = this.peso;
     const a = this.altura;
 
-    const healty = calc;
-    const isHealty = this.isHealty(healty);
-    
     calc = this.peso / (this.altura * this.altura);
+    const healty = calc;
+
+    // const giveHealty = this.isHealty(healty);
     
-    return console.log(isHealty)
+    
+    return healty.toFixed(2);
 };
 
 GetIMC.prototype.isHealty = function(healty) {
  
-    // console.log(healty);
+    const getHealty = healty;
+    console.log(getHealty);
     
     // const healtyArray = [
     //     {imc: 18.5,},
@@ -78,9 +80,10 @@ GetIMC.prototype.isHealty = function(healty) {
     // return healtyArray;
 };
 
-const imc = new GetIMC(84, 1.80);
-console.log(imc.calc());
+// const imc = new GetIMC(84, 1.80);
+// console.log(imc.calc());
 
 
 
-
+const teste = "123456789".split("").map(parseInt);
+console.log(teste);
