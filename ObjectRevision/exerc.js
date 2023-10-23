@@ -30,40 +30,37 @@ ValidCPF.prototype.generateDigit = function(generateID) {
 function GetIMC(peso, altura) {
   this.peso = peso;
   this.altura = altura;
-//   Object.defineProperties(this, "clearIMC",{
-//     get: () => {
-//         return;
-//     }
-//   });
+    Object.defineProperty(this, "imc", {
+        writable: true,
+        configurable: true,
+        enumerable: true,
+        value: this.peso / (this.altura * this.altura)
+    });
+   
 }
 
-GetIMC.prototype.validar = () => {
+GetIMC.prototype.validar = function() {
+
     if(typeof this.peso === 'undefined') return console.log(this.peso);
     if(this.peso <= 0) return false;
     
-    if(typeof this.altura === 'undefined') return console.log(this);
+    if(typeof this.altura === 'undefined') return console.log(this.altura);
     if(this.altura <= 0) return false;
    
     return true;
 };
 
 GetIMC.prototype.calc = function(calc) {
-    const p = this.peso;
-    const a = this.altura;
 
     calc = this.peso / (this.altura * this.altura);
-    const healty = calc;
-
-    // const giveHealty = this.isHealty(healty);
+   
+    this.imc = calc;
     
-    
-    return healty.toFixed(2);
+    return calc.toFixed(2);
 };
 
-GetIMC.prototype.isHealty = function(healty) {
+GetIMC.prototype.isHealty = function() {
  
-    const getHealty = healty;
-    console.log(getHealty);
     
     // const healtyArray = [
     //     {imc: 18.5,},
@@ -80,10 +77,12 @@ GetIMC.prototype.isHealty = function(healty) {
     // return healtyArray;
 };
 
-// const imc = new GetIMC(84, 1.80);
-// console.log(imc.calc());
+
+
+const imcHealty = new GetIMC(84, 1.80);
+console.log(imcHealty);
 
 
 
-const teste = "123456789".split("").map(parseInt);
-console.log(teste);
+// const teste = "123456789".split("").map(parseInt);
+// console.log(teste);

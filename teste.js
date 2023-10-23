@@ -37,3 +37,40 @@
 // });
 // console.log(gerarID);
 
+function Testar(valor, valor2) {
+    this.valor = valor;
+    this.valor2 = valor2;
+
+    Object.defineProperty(this, "valorTotal" ,{
+        writable: true,
+        enumerable: true,
+        configurable: false,
+        value: 0
+    });
+    
+    Object.defineProperties(this, valor, valor2 ,{
+        writable: false,
+        enumerable: true,
+        configurable: false,
+    });
+
+    get = () => {
+        return console.log(typeof valorTotal);
+    };
+
+}
+
+Testar.prototype.calc = function() {
+    const num1 = this.valor;
+}
+
+Testar.prototype.calc2 = function() {
+    const num2 = this.valor2;
+}
+
+Testar.prototype.calcular = function() {
+
+}
+
+const t1 = new Testar(5, 5);
+console.log(t1);
