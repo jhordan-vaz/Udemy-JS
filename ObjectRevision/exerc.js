@@ -27,9 +27,10 @@ ValidCPF.prototype.generateDigit = function(generateID) {
 
 
 
-function GetIMC(peso, altura) {
+function GetIMC(peso, altura, result) {
   this.peso = peso;
   this.altura = altura;
+  this.result = result;
     Object.defineProperty(this, "imc", {
         writable: true,
         configurable: true,
@@ -80,7 +81,7 @@ GetIMC.prototype.isHealty = function() {
 
 
 const imcHealty = new GetIMC(84, 1.80);
-console.log(imcHealty);
+console.log(imcHealty.isHealty());
 
 
 
