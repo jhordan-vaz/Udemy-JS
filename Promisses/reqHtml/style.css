@@ -1,0 +1,24 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: violet;
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 30px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
