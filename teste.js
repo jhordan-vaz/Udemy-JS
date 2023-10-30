@@ -75,10 +75,36 @@
 // const t1 = new Testar(5, 5);
 // console.log(t1);
 
-function validateNickName(str) {
-    if(str.length > 10 || str.length <= 3) return false;
-    if(str.substr(0, 0) !== "string") return false;
-    return str;
+function getRand(min, max) {
+    min *= 1000;
+    max *= 1000;
+    Math.floor(Math.random() * (max - min) + min);
 }
 
-console.log(validateNickName("1acbd"));
+
+// function wait(msg, time) {
+//     return new Promise((resolve, reject) =>{
+//         if(typeof msg !== "string")  return reject("bad value");       
+//             setTimeout(() => {
+//             resolve(msg);
+//         }, time);
+//     });
+// }
+
+function wait(msg, time) {
+    return new Promise((resolve, reject) => {
+        
+    });
+}
+
+async function wait() {
+const fase1 = await wait("Conectando ao banco de dados...", getRand(1, 3));
+console.log(fase1)
+
+const fase2 = await wait("Organizando arquivos...", getRand(1, 3));
+console.log(fase2);
+
+const fase3 = await wait("Arquivos preparados!", getRand(1, 3));
+console.log(fase3);
+}
+wait();

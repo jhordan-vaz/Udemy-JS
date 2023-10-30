@@ -40,6 +40,7 @@ function wait(msg, timer) {
 
 
 async function exec() {
+ try {
    const getSync1 = await wait("fase 1 ", rand(1, 3))
    console.log(getSync1);
 
@@ -47,9 +48,12 @@ async function exec() {
    console.log(getSync2)
 
    const getSync3 = await wait("fase 3 ", rand(1, 3))
-    console.log(getSync3)
+   console.log(getSync3)
 
    console.log("Acabaram as sincronizações", getSync3);
+ } catch(e) {
+    console.log(e)
+ }
+  
 }
-    
 exec();
