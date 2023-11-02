@@ -23,3 +23,20 @@ console.log(pessoasFilterName);
 console.log(pessoasFilterAge);
 console.log(pessoasFilterLetters);
 
+const array = [1, 12, 6, 17, 20, 2, 5, 19, 3, 44, 8, 4];
+const arrayFilter = array.filter(val => val > 10);
+
+const arrayNomes = [
+    "Jhordan",
+    "Amanda",
+    "Bruno",
+    "Pamela",
+    "João",
+    "Isabela"
+]
+
+// const nomesFilter = arrayNomes.filter(letra => letra.toLocaleLowerCase().endsWith("a"));
+const nomesFilter = arrayNomes.filter(val => val.length < 5);
+
+console.log(nomesFilter);
+console.log(arrayFilter);

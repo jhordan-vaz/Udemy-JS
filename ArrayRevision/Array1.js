@@ -9,7 +9,7 @@ function handleArray(n) {
     let getArray = nomes;
     let arrayLength = nomes.length;
 
-    console.log(arrayLength);
+    console.log( arrayLength + " index" );
     return console.log(getArray);
 }
 
