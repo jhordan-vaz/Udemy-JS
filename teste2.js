@@ -32,3 +32,5 @@ document.addEventListener("click", e => {
     };
 });
 
+let div1 = document.getElementById("testDiv");
+let test = div1.getAttribute("test");

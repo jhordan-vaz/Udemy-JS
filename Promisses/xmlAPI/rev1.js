@@ -1,47 +1,48 @@
-const request = obj => {
-  const xhr = new XMLHttpRequest();
-  xhr.open(obj.method, obj.url, true);
-  xhr.send(null);
+const request = obj => { // função XML request
+  const xhr = new XMLHttpRequest(); // usando construtor do xml
+  xhr.open(obj.method, obj.url, true); // passando method, url e se é assincrono
+  xhr.send(null); // envio de formulários etc...
 
-  xhr.addEventListener("load", () => {
-    if(xhr.status >= 200 && xhr.status <= 300) {
-      obj.success(xhr.responseText);
+  xhr.addEventListener("load", () => { // evento tipo load
+    if(xhr.status >= 200 && xhr.status <= 300) { // status code
+      obj.success(xhr.responseText); // atrela uma função para resposta 
     } else {
-      obj.error(xhr.statusText);
+      obj.error(xhr.statusText); // atrela uma função para o erro
     }
   });
 };
 
-document.addEventListener("click", e => {
-  const el = e.target;
-  const tag = el.tagName.toLowerCase();
+document.addEventListener("click", e => { // evento tipo click 
+  const el = e.target; // elemento recebe evento.alto
+  const tag = el.tagName.toLowerCase(); // pega o alvo do elemento e transforma em lowerCase
 
-  if(tag === "a") {
+  if(tag === "a") { // a tag for um link "a"
     e.preventDefault();
-    loadPage(el);
-    alert("Clickou!")
+    loadPage(el); // carrega pagina "link"
   }
 });
 
-function loadPage(el) {
-  const href = el.getAttribute("href");
-  
-  request({
-    method: "GET",
-    url:href,
-    success() {
-
+function loadPage(el) { // recebe o elemento
+  const href = el.getAttribute("href"); // href pega o atributo href do html "a"
+  console.log(href); 
+  request({ // passando o OBJ da funçao request
+    method: "GET", 
+    url: href,
+    success(respose) {
+      loadResponse(respose);
     },
-    error() {
-
+    error(errorText) {
+      console.log(errorText);
     }
-  })
+  });
 
 }
 
 
-
-
+function loadResponse(response) { 
+  const load = document.querySelector(".receiver")
+  load.innerHTML = response;
+};
 
 
 
